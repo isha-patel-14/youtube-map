@@ -18,9 +18,6 @@ import s4 from '../assets/Ellipse 1 (3).png'
 import s5 from '../assets/Ellipse 1 (4).png'
 import s6 from '../assets/Ellipse 1 (5).png'
 
-
-
-
 function Sidebar() {
 
     const data1 = [
