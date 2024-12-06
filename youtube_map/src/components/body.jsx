@@ -212,7 +212,6 @@ function Body() {
                 }
                 </div>
 
-
                 <div className='main1'>
                 {m_data3.map((line)=>
                 (
