@@ -63,4 +63,6 @@
 .line1{
     border-bottom: 1px solid #333333;
     margin-top: 7px;
+    width: 85%;
+    margin-left: 215px;
 }

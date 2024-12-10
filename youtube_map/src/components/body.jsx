@@ -19,52 +19,98 @@ import p4 from '../assets/Ellipse 4 (4).png'
 import p5 from '../assets/Ellipse 4 (5).png'
 import p6 from '../assets/Ellipse 4 (6).png'
 import p from '../assets/Ellipse 4-1.png'
+import React,{useState,useEffect} from 'react'
 
 function Body() {
 
-    const m_data1 = [
-        {
-            src:i1,
-            profile: p1,
-            heading1: ["Bulbuli|Coke StudioBangla|", "Season One|Ritu Raj X Nandita"],
-            heading2: {
-                h2: "Coke Studio Bangla",
-                views: "1.5M views - 2 days ago",
-                verify: tick, 
-            },
-        },
-        {
-            src:i2,
-            profile: p2,
-            heading1: ["Infinix Note 12:", "AMOLED Helio G88 Soc!"],
-            heading2: {
-                h2: "ATC Android ToTo Company",
-                views: "4.2M views - 2 days ago",
-                verify: tick, 
-            },
-        },
-        {
-            src:i3,
-            profile: p3,
-            heading1: ["My first UX Design case study-", "This got me my first job."],
-            heading2: {
-                h2: "Saptarshi Prakash",
-                views: "4.8K views - 1 year ago",
+    const [ video , setVideo ] = useState([])
+    const [ video1 , setVideo1 ] = useState([])
+    const [ video2 , setVideo2 ] = useState([])
+
+    useEffect(() => {
+        fetch('http://localhost:3000/m_data1')
+      .then(response => response.json())
+      .then(m_data1 => {
+        console.log(m_data1); 
+        setVideo(m_data1);
+      })
+      .catch(error => {
+        console.error('There was a problem with the fetch operation:', error);
+      });
+    
+      },[]);
+
+      useEffect(() => {
+        fetch('http://localhost:3000/m_data2')
+      .then(response => response.json())
+      .then(m_data2 => {
+        console.log(m_data2); 
+        setVideo1(m_data2);
+      })
+      .catch(error => {
+        console.error('There was a problem with the fetch operation:', error);
+      });
+    
+      },[]);
+
+
+      useEffect(() => {
+        fetch('http://localhost:3000/m_data3')
+      .then(response => response.json())
+      .then(m_data3 => {
+        console.log(m_data3); 
+        setVideo2(m_data3);
+      })
+      .catch(error => {
+        console.error('There was a problem with the fetch operation:', error);
+      });
+    
+      },[]);
+
+
+    // const m_data1 = [
+    //     {
+    //         src:i1,
+    //         profile: p1,
+    //         heading1: ["Bulbuli|Coke StudioBangla|", "Season One|Ritu Raj X Nandita"],
+    //         heading2: {
+    //             h2: "Coke Studio Bangla",
+    //             views: "1.5M views - 2 days ago",
+    //             verify: tick, 
+    //         },
+    //     },
+    //     {
+    //         src:i2,
+    //         profile: p2,
+    //         heading1: ["Infinix Note 12:", "AMOLED Helio G88 Soc!"],
+    //         heading2: {
+    //             h2: "ATC Android ToTo Company",
+    //             views: "4.2M views - 2 days ago",
+    //             verify: tick, 
+    //         },
+    //     },
+    //     {
+    //         src:i3,
+    //         profile: p3,
+    //         heading1: ["My first UX Design case study-", "This got me my first job."],
+    //         heading2: {
+    //             h2: "Saptarshi Prakash",
+    //             views: "4.8K views - 1 year ago",
                  
-            },
-        },
-        {
-            src:i4,
-            profile: p,
-            heading1: ["My Mix", "Songs"],
-            heading2: {
-                h2: "Lopamudra Mitra,Anupam Roy",
-                views: "1.5M views - 2 days ago",
+    //         },
+    //     },
+    //     {
+    //         src:i4,
+    //         profile: p,
+    //         heading1: ["My Mix", "Songs"],
+    //         heading2: {
+    //             h2: "Lopamudra Mitra,Anupam Roy",
+    //             views: "1.5M views - 2 days ago",
                  
-            },
-        },
+    //         },
+    //     },
         
-    ];
+    // ];
 
     const m_data2 = [
         {
@@ -157,7 +203,7 @@ function Body() {
             <div className='mainbody'>
 
                 <div className='main1'>
-                {m_data1.map((line)=>
+                {video.map((line)=>
                 (
                 <div className="one">
                     <div>
@@ -185,7 +231,7 @@ function Body() {
                 </div>
 
                 <div className='main1'>
-                {m_data2.map((line)=>
+                {video1.map((line)=>
                 (
                 <div className="one">
                     <div>
@@ -213,7 +259,7 @@ function Body() {
                 </div>
 
                 <div className='main1'>
-                {m_data3.map((line)=>
+                {video2.map((line)=>
                 (
                 <div className="one">
                     <div>
