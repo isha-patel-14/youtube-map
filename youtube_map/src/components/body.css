@@ -1,3 +1,7 @@
+body{
+    color: white;
+}
+
 .mainbody{
     display: flex;
     flex-direction: column;
@@ -48,4 +52,130 @@
 .h2_1{
     margin-top: -5px;
     font-weight:400;
+}
+
+
+
+
+
+.searchbar{
+    width: 490px;
+    height: 30px;
+    background-color: black;
+    margin-left: 250px;
+    border:1px solid #333333;
+    color: white;
+    position: absolute;
+    top: 8px;
+    left: 14%;
+}
+
+.search_button{
+    height: 33px;
+    position: absolute;
+    top: 8px;
+    left: 63%;   
+}
+
+.search_button:hover{
+    cursor: pointer;
+    background-color: #c6c6c6;
+}
+
+.video-player {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.video-player iframe {
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+}
+
+.results {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.one {
+    width: 280px;
+    /* height: 280px; */
+    margin: 10px;
+    cursor: pointer;
+    transition: transform 0.3s;
+    overflow-x: hidden;
+}
+
+.one:hover {
+    transform: scale(1.05);
+}
+
+.card_pic {
+    width: 280px;
+    height: 200px;
+    border-radius: 10px;
+}
+
+.heading1 {
+    font-size: 14px;
+    margin-top: 5px;
+    margin-left: -0.5px;
+    width: 100%;
+
+}
+
+.heading2 .h2 {
+    font-size: 14px;
+    color: gray;
+    margin-left: -40px;
+}
+
+.count-buttons{
+    position: absolute;
+    top: 9px;
+    left: 75%;   
+}
+
+.count-btn:hover{
+    cursor: pointer;
+    background-color: #c6c6c6;
+}
+
+.count-btn{
+    height: 30px;
+    width: 35px;
+    margin-left: 15px;
+}
+
+.video-player {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #ff5c5c;
+    color: white;
+    border: none;
+    font-size: 24px;
+    font-weight: bold;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.close-button:hover {
+    background-color: #ff3333;
 }

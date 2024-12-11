@@ -56,6 +56,12 @@
     border-radius: 15px;
 }
 
+.n2_name:hover{
+    cursor: pointer;
+    background-color: #cccccc;
+    color: black;
+}
+
 .leftArr{
     margin-top: 5px;
 }
